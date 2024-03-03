@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website - Engr Janrez</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/eec7984ee0.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
@@ -34,11 +35,96 @@
                 <img src="images/user.jpg">
             </div>
             <div class="about-col-2">
-                <h1>About Me</h1>
+                <h1 class="sub-title">About Me</h1>
+                <p class="struc-text">My name is Janrez Kasilag, and I come from Mauban, Quezon. I have lived in Mauban, Quezon for 23 years now. I graduated with a degree in Electronics Engineering from Southern Luzon State University in Lucban, Quezon. I became a Licensed Electronics Technician in April 2023, and later on, a Licensed Electronics Engineer in October 2023.</p>
+                <br>
+                <p class="struc-text">During my time in college, I focused on honing my skills in programming, building electronic circuits, and using Autocad. People know me for my problem-solving abilities, critical thinking skills, and my capacity to collaborate and lead effectively.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Microcontroller Programmer</span><br>Arduino Programmer/Schematic</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Building simple Android Apps</li>
+                        <li><span>Autocad</span><br>Building simple 2d/3d Drawings</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li>No Experience</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019 - 2023</span><br>BS Electronics Engineering from Southern Luzon State University(Lucban, Quezon)</li>
+                        <li><span>2017-2019</span><br>STEM Strand from Dr. Maria D. Pastrana National High School(DMDPNHS)</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
     </div>
 </div>
+
+<!-------------------------Services----------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Microcontroller Programmer</h2>
+                <p>Are you looking to bring your Arduino project to life? Look no further! I specialize in Arduino programming and can help you turn your ideas into reality. Whether you're a hobbyist or a professional, I offer reliable and efficient coding solutions tailored to your specific needs.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>Web Development</h2>
+                <p>Are you ready to establish your online presence or take your current website to the next level? Look no further! I specialize in crafting sleek and functional websites tailored to your needs.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Development</h2>
+                <p>Ready to bring your app idea to life or automate your home with intuitive mobile solutions? You're in the right place! I specialize in building simple and effective apps using MIT App Inventor.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-gears"></i>
+                <h2>Autocad</h2>
+                <p>Need professional 2D or 3D designs for your project? Look no further! I specialize in utilizing AutoCAD to create precise and visually appealing designs tailored to your needs.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------------------------Portfolio------------------>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
 </body>
 </html>
